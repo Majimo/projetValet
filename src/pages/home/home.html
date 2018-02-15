@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <button ion-button (click)="showLogin()" color="light">
+      <ion-icon name="person"></ion-icon>
+    </button>
+    <ion-title>City Valet</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bodyAppli">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-card>
+    <p id="user"></p>
+  </ion-card>
+  <ion-card>
+  <ion-card-header>
+    Options
+  </ion-card-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button (click)='goToVoiturier()'>Voiturier</button>
+      </ion-col>
+      <ion-col>
+        <button (click)='goToPlein()'>Plein</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)='goToEntretien()' disabled>Entretien</button>
+      </ion-col>
+      <ion-col>
+        <button (click)='goToRevision()' disabled>Révision</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)='goToPressing()' disabled>Pressing</button>
+      </ion-col>
+      <ion-col>
+        <button (click)='goToCourses()' disabled>Courses</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-card>
+</ion-content>

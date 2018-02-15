@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <title-partial>
+
+    </title-partial>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Vous souhaitez nous contacter ?
+    </ion-card-header>
+    <ion-card-content> 
+       <p>Par mail ? <br>
+          <button ion-button (click)="mailDropbird()" outline round class="center">
+            contact@dropbird.fr
+          </button>
+        </p> 
+       <p class="phone">Par téléphone ? <br>
+          <button ion-button (click)="callDropbird()" outline round class="center">
+            09.50.01.32.50
+          </button>
+        </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

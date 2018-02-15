@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <title-partial>
+
+    </title-partial>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Données Utilisateur
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <div *ngIf="userInfo.connected != 0; else elseBlock">
+        <ion-list>
+          <p>
+            <ion-icon name="car"></ion-icon>
+          </p>
+          <p>Pseudo : {{ userInfo.username }}</p>
+          <p>Password : {{ userInfo.password }}</p>
+        </ion-list>
+      </div>
+
+      <ng-template #elseBlock>
+        <p>
+          Aucun utilisateur connecté pour le moment.
+        </p>
+      </ng-template>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

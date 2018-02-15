@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <title-partial>
+
+    </title-partial>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Appeler un voiturier
+    </ion-card-header>
+    <ion-card-content>
+
+      <div *ngIf="staticCarState; else elseBlock">
+        <p>
+          Vous voulez contacter un voiturier pour récupérer votre voiture ?
+          <button ion-button (click)='callVoiturier(false)' round full>Appeler Voiturier</button>
+        </p>
+      </div>
+
+      <ng-template #elseBlock>
+        <p>
+          Vous voulez contacter un voiturier pour déposer votre voiture ?
+          <button ion-button (click)='callVoiturier(true)' round full>Appeler Voiturier</button>
+        </p>
+      </ng-template>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

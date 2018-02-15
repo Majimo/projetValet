@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <title-partial>
+
+    </title-partial>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      Faites le plein de votre voiture
+    </ion-card-header>
+    <ion-card-content>
+      <p>Pendant que votre voiture est stockée dans le parking, nous pouvons vous proposer de faire le plein d'essence de celle-ci.
+      </p>
+        <ion-item>
+          <ion-label color="primary">Litres :</ion-label>
+          <ion-input [value]="qty" [(ngModel)]="qty" type="number"></ion-input>
+        </ion-item>
+        <button ion-button block (click)="doPlein()" round>
+          Faire le plein
+        </button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
